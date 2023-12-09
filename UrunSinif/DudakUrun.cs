@@ -8,14 +8,20 @@ namespace UrunSinif
 {
     public class DudakUrun : Urun
     {
-        private string renk;
-
-        public DudakUrun(string marka, string altKategori, string renk)
+        public string marka;
+        public string altKategori;
+        public string renk;
+        public int fiyat;
+        public DudakUrun(string marka, string altKategori, string renk, int fiyat)
         {
             this.marka = marka;
             this.altKategori = altKategori;
             this.renk = renk;
-
+            this.fiyat = fiyat;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + marka + " - " + altKategori + " - " + renk + " = " + fiyat.ToString();
         }
     }
 }

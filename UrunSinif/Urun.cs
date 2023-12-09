@@ -9,13 +9,16 @@ namespace UrunSinif
 {
     public abstract class Urun
     {
-        protected string marka;
-        protected string altKategori;
-        protected bool secildi;
+        public string marka;
+        public string altKategori;
+        public bool secildi;
 
         public override string ToString()
         {
             return marka + " - " + altKategori;
         }
+
+        
     }
 }
+

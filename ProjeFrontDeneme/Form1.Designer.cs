@@ -73,58 +73,59 @@
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
+            cikarmaButton = new Button();
             SuspendLayout();
             // 
             // Makyaj
             // 
-            Makyaj.BackColor = Color.LightPink;
+            Makyaj.BackColor = Color.Plum;
             Makyaj.BorderStyle = BorderStyle.None;
             Makyaj.FormattingEnabled = true;
             Makyaj.ItemHeight = 20;
-            Makyaj.Location = new Point(44, 39);
+            Makyaj.Location = new Point(24, 39);
             Makyaj.Name = "Makyaj";
             Makyaj.Size = new Size(307, 580);
             Makyaj.TabIndex = 4;
             // 
             // Ürünler
             // 
-            Ürünler.BackColor = Color.LightPink;
+            Ürünler.BackColor = Color.Plum;
             Ürünler.BorderStyle = BorderStyle.None;
             Ürünler.FormattingEnabled = true;
             Ürünler.ItemHeight = 20;
-            Ürünler.Location = new Point(412, 39);
+            Ürünler.Location = new Point(352, 38);
             Ürünler.Name = "Ürünler";
-            Ürünler.Size = new Size(307, 580);
+            Ürünler.Size = new Size(377, 580);
             Ürünler.TabIndex = 5;
             // 
             // Sepetim
             // 
-            Sepetim.BackColor = Color.LightPink;
+            Sepetim.BackColor = Color.Plum;
             Sepetim.BorderStyle = BorderStyle.None;
             Sepetim.FormattingEnabled = true;
             Sepetim.ItemHeight = 20;
-            Sepetim.Location = new Point(786, 39);
+            Sepetim.Location = new Point(747, 38);
             Sepetim.Name = "Sepetim";
-            Sepetim.Size = new Size(307, 360);
+            Sepetim.Size = new Size(371, 360);
             Sepetim.TabIndex = 6;
             // 
             // Hesabım
             // 
-            Hesabım.BackColor = Color.LightPink;
+            Hesabım.BackColor = Color.Plum;
             Hesabım.BorderStyle = BorderStyle.None;
             Hesabım.FormattingEnabled = true;
             Hesabım.ItemHeight = 20;
-            Hesabım.Location = new Point(786, 409);
+            Hesabım.Location = new Point(769, 408);
             Hesabım.Name = "Hesabım";
-            Hesabım.Size = new Size(307, 200);
+            Hesabım.Size = new Size(320, 200);
             Hesabım.TabIndex = 7;
             // 
             // tenCbox
             // 
             tenCbox.AutoSize = true;
-            tenCbox.BackColor = Color.LightPink;
+            tenCbox.BackColor = Color.Plum;
             tenCbox.Font = new Font("Baskerville Old Face", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tenCbox.Location = new Point(81, 72);
+            tenCbox.Location = new Point(62, 81);
             tenCbox.Name = "tenCbox";
             tenCbox.Size = new Size(72, 30);
             tenCbox.TabIndex = 9;
@@ -134,9 +135,9 @@
             // gozCbox
             // 
             gozCbox.AutoSize = true;
-            gozCbox.BackColor = Color.LightPink;
+            gozCbox.BackColor = Color.Plum;
             gozCbox.Font = new Font("Baskerville Old Face", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            gozCbox.Location = new Point(81, 254);
+            gozCbox.Location = new Point(61, 245);
             gozCbox.Name = "gozCbox";
             gozCbox.Size = new Size(72, 30);
             gozCbox.TabIndex = 10;
@@ -146,9 +147,9 @@
             // dudakCbox
             // 
             dudakCbox.AutoSize = true;
-            dudakCbox.BackColor = Color.LightPink;
+            dudakCbox.BackColor = Color.Plum;
             dudakCbox.Font = new Font("Baskerville Old Face", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dudakCbox.Location = new Point(218, 72);
+            dudakCbox.Location = new Point(195, 82);
             dudakCbox.Name = "dudakCbox";
             dudakCbox.Size = new Size(97, 30);
             dudakCbox.TabIndex = 11;
@@ -158,9 +159,9 @@
             // tirnakCbox
             // 
             tirnakCbox.AutoSize = true;
-            tirnakCbox.BackColor = Color.LightPink;
+            tirnakCbox.BackColor = Color.Plum;
             tirnakCbox.Font = new Font("Baskerville Old Face", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tirnakCbox.Location = new Point(218, 254);
+            tirnakCbox.Location = new Point(194, 246);
             tirnakCbox.Name = "tirnakCbox";
             tirnakCbox.Size = new Size(97, 30);
             tirnakCbox.TabIndex = 12;
@@ -170,9 +171,9 @@
             // fondotenCbox
             // 
             fondotenCbox.AutoSize = true;
-            fondotenCbox.BackColor = Color.White;
+            fondotenCbox.BackColor = Color.Plum;
             fondotenCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            fondotenCbox.Location = new Point(70, 129);
+            fondotenCbox.Location = new Point(51, 129);
             fondotenCbox.Name = "fondotenCbox";
             fondotenCbox.Size = new Size(97, 23);
             fondotenCbox.TabIndex = 14;
@@ -182,9 +183,9 @@
             // kapaticiCbox
             // 
             kapaticiCbox.AutoSize = true;
-            kapaticiCbox.BackColor = Color.White;
+            kapaticiCbox.BackColor = Color.Plum;
             kapaticiCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            kapaticiCbox.Location = new Point(70, 159);
+            kapaticiCbox.Location = new Point(51, 159);
             kapaticiCbox.Name = "kapaticiCbox";
             kapaticiCbox.Size = new Size(85, 23);
             kapaticiCbox.TabIndex = 15;
@@ -194,9 +195,9 @@
             // allikCbox
             // 
             allikCbox.AutoSize = true;
-            allikCbox.BackColor = Color.White;
+            allikCbox.BackColor = Color.Plum;
             allikCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            allikCbox.Location = new Point(70, 189);
+            allikCbox.Location = new Point(51, 189);
             allikCbox.Name = "allikCbox";
             allikCbox.Size = new Size(63, 23);
             allikCbox.TabIndex = 16;
@@ -206,9 +207,9 @@
             // farCbox
             // 
             farCbox.AutoSize = true;
-            farCbox.BackColor = Color.White;
+            farCbox.BackColor = Color.Plum;
             farCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            farCbox.Location = new Point(70, 370);
+            farCbox.Location = new Point(50, 354);
             farCbox.Name = "farCbox";
             farCbox.Size = new Size(94, 23);
             farCbox.TabIndex = 20;
@@ -218,9 +219,9 @@
             // eyelinerCbox
             // 
             eyelinerCbox.AutoSize = true;
-            eyelinerCbox.BackColor = Color.White;
+            eyelinerCbox.BackColor = Color.Plum;
             eyelinerCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            eyelinerCbox.Location = new Point(70, 340);
+            eyelinerCbox.Location = new Point(50, 324);
             eyelinerCbox.Name = "eyelinerCbox";
             eyelinerCbox.Size = new Size(88, 23);
             eyelinerCbox.TabIndex = 19;
@@ -230,9 +231,9 @@
             // maskaraCbox
             // 
             maskaraCbox.AutoSize = true;
-            maskaraCbox.BackColor = Color.White;
+            maskaraCbox.BackColor = Color.Plum;
             maskaraCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            maskaraCbox.Location = new Point(70, 310);
+            maskaraCbox.Location = new Point(50, 294);
             maskaraCbox.Name = "maskaraCbox";
             maskaraCbox.Size = new Size(87, 23);
             maskaraCbox.TabIndex = 18;
@@ -242,9 +243,9 @@
             // dParlaCbox
             // 
             dParlaCbox.AutoSize = true;
-            dParlaCbox.BackColor = Color.White;
+            dParlaCbox.BackColor = Color.Plum;
             dParlaCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dParlaCbox.Location = new Point(195, 188);
+            dParlaCbox.Location = new Point(172, 189);
             dParlaCbox.Name = "dParlaCbox";
             dParlaCbox.Size = new Size(144, 23);
             dParlaCbox.TabIndex = 24;
@@ -254,9 +255,9 @@
             // dKalemCbox
             // 
             dKalemCbox.AutoSize = true;
-            dKalemCbox.BackColor = Color.White;
+            dKalemCbox.BackColor = Color.Plum;
             dKalemCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dKalemCbox.Location = new Point(195, 159);
+            dKalemCbox.Location = new Point(172, 160);
             dKalemCbox.Name = "dKalemCbox";
             dKalemCbox.Size = new Size(130, 23);
             dKalemCbox.TabIndex = 23;
@@ -266,9 +267,9 @@
             // rujCbox
             // 
             rujCbox.AutoSize = true;
-            rujCbox.BackColor = Color.White;
+            rujCbox.BackColor = Color.Plum;
             rujCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            rujCbox.Location = new Point(196, 129);
+            rujCbox.Location = new Point(173, 130);
             rujCbox.Name = "rujCbox";
             rujCbox.Size = new Size(55, 23);
             rujCbox.TabIndex = 22;
@@ -278,9 +279,9 @@
             // bakimCbox
             // 
             bakimCbox.AutoSize = true;
-            bakimCbox.BackColor = Color.White;
+            bakimCbox.BackColor = Color.Plum;
             bakimCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            bakimCbox.Location = new Point(201, 370);
+            bakimCbox.Location = new Point(172, 355);
             bakimCbox.Name = "bakimCbox";
             bakimCbox.Size = new Size(138, 23);
             bakimCbox.TabIndex = 28;
@@ -290,9 +291,9 @@
             // asetonCbox
             // 
             asetonCbox.AutoSize = true;
-            asetonCbox.BackColor = Color.White;
+            asetonCbox.BackColor = Color.Plum;
             asetonCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            asetonCbox.Location = new Point(201, 340);
+            asetonCbox.Location = new Point(172, 325);
             asetonCbox.Name = "asetonCbox";
             asetonCbox.Size = new Size(79, 23);
             asetonCbox.TabIndex = 27;
@@ -302,9 +303,9 @@
             // ojeCbox
             // 
             ojeCbox.AutoSize = true;
-            ojeCbox.BackColor = Color.White;
+            ojeCbox.BackColor = Color.Plum;
             ojeCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            ojeCbox.Location = new Point(201, 310);
+            ojeCbox.Location = new Point(172, 295);
             ojeCbox.Name = "ojeCbox";
             ojeCbox.Size = new Size(57, 23);
             ojeCbox.TabIndex = 26;
@@ -314,10 +315,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.LightPink;
+            label1.BackColor = Color.Plum;
             label1.Font = new Font("Baskerville Old Face", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(117, 427);
+            label1.Location = new Point(97, 408);
             label1.Name = "label1";
             label1.Size = new Size(141, 26);
             label1.TabIndex = 29;
@@ -326,9 +327,9 @@
             // maybellineCbox
             // 
             maybellineCbox.AutoSize = true;
-            maybellineCbox.BackColor = Color.LightPink;
+            maybellineCbox.BackColor = Color.Plum;
             maybellineCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            maybellineCbox.Location = new Point(70, 467);
+            maybellineCbox.Location = new Point(50, 453);
             maybellineCbox.Name = "maybellineCbox";
             maybellineCbox.Size = new Size(175, 23);
             maybellineCbox.TabIndex = 30;
@@ -338,9 +339,9 @@
             // lorealCbox
             // 
             lorealCbox.AutoSize = true;
-            lorealCbox.BackColor = Color.LightPink;
+            lorealCbox.BackColor = Color.Plum;
             lorealCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lorealCbox.Location = new Point(70, 497);
+            lorealCbox.Location = new Point(50, 485);
             lorealCbox.Name = "lorealCbox";
             lorealCbox.Size = new Size(119, 23);
             lorealCbox.TabIndex = 31;
@@ -350,9 +351,9 @@
             // goldenCbox
             // 
             goldenCbox.AutoSize = true;
-            goldenCbox.BackColor = Color.LightPink;
+            goldenCbox.BackColor = Color.Plum;
             goldenCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            goldenCbox.Location = new Point(70, 557);
+            goldenCbox.Location = new Point(50, 549);
             goldenCbox.Name = "goldenCbox";
             goldenCbox.Size = new Size(121, 23);
             goldenCbox.TabIndex = 32;
@@ -362,9 +363,9 @@
             // flormarCbox
             // 
             flormarCbox.AutoSize = true;
-            flormarCbox.BackColor = Color.LightPink;
+            flormarCbox.BackColor = Color.Plum;
             flormarCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            flormarCbox.Location = new Point(70, 527);
+            flormarCbox.Location = new Point(50, 517);
             flormarCbox.Name = "flormarCbox";
             flormarCbox.Size = new Size(86, 23);
             flormarCbox.TabIndex = 33;
@@ -374,9 +375,9 @@
             // wetCbox
             // 
             wetCbox.AutoSize = true;
-            wetCbox.BackColor = Color.LightPink;
+            wetCbox.BackColor = Color.Plum;
             wetCbox.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            wetCbox.Location = new Point(70, 585);
+            wetCbox.Location = new Point(50, 581);
             wetCbox.Name = "wetCbox";
             wetCbox.Size = new Size(111, 23);
             wetCbox.TabIndex = 34;
@@ -387,17 +388,18 @@
             // 
             urunlerLbox.FormattingEnabled = true;
             urunlerLbox.ItemHeight = 20;
-            urunlerLbox.Location = new Point(434, 72);
+            urunlerLbox.Location = new Point(370, 71);
             urunlerLbox.Name = "urunlerLbox";
-            urunlerLbox.Size = new Size(266, 524);
+            urunlerLbox.Size = new Size(341, 524);
             urunlerLbox.TabIndex = 35;
+            urunlerLbox.MouseClick += urunlerLbox_MouseClick;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.LightPink;
+            label2.BackColor = Color.Plum;
             label2.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(887, 359);
+            label2.Location = new Point(890, 358);
             label2.Name = "label2";
             label2.Size = new Size(68, 19);
             label2.TabIndex = 36;
@@ -405,9 +407,9 @@
             // 
             // toplamTbox
             // 
-            toplamTbox.Location = new Point(961, 359);
+            toplamTbox.Location = new Point(957, 358);
             toplamTbox.Name = "toplamTbox";
-            toplamTbox.Size = new Size(125, 27);
+            toplamTbox.Size = new Size(132, 27);
             toplamTbox.TabIndex = 37;
             // 
             // hesaplaButton
@@ -415,9 +417,9 @@
             hesaplaButton.BackColor = Color.PaleGreen;
             hesaplaButton.FlatStyle = FlatStyle.Popup;
             hesaplaButton.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            hesaplaButton.Location = new Point(986, 324);
+            hesaplaButton.Location = new Point(989, 321);
             hesaplaButton.Name = "hesaplaButton";
-            hesaplaButton.Size = new Size(78, 29);
+            hesaplaButton.Size = new Size(85, 29);
             hesaplaButton.TabIndex = 38;
             hesaplaButton.Text = "Hesapla";
             hesaplaButton.UseVisualStyleBackColor = false;
@@ -425,9 +427,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.LightPink;
+            label3.BackColor = Color.Plum;
             label3.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(804, 432);
+            label3.Location = new Point(787, 431);
             label3.Name = "label3";
             label3.Size = new Size(87, 19);
             label3.TabIndex = 39;
@@ -436,9 +438,9 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.LightPink;
+            label4.BackColor = Color.Plum;
             label4.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(804, 467);
+            label4.Location = new Point(787, 466);
             label4.Name = "label4";
             label4.Size = new Size(67, 19);
             label4.TabIndex = 40;
@@ -447,9 +449,9 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.LightPink;
+            label5.BackColor = Color.Plum;
             label5.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(804, 501);
+            label5.Location = new Point(787, 500);
             label5.Name = "label5";
             label5.Size = new Size(48, 19);
             label5.TabIndex = 41;
@@ -457,21 +459,21 @@
             // 
             // adSoyadTbox
             // 
-            adSoyadTbox.Location = new Point(939, 432);
+            adSoyadTbox.Location = new Point(922, 431);
             adSoyadTbox.Name = "adSoyadTbox";
             adSoyadTbox.Size = new Size(125, 27);
             adSoyadTbox.TabIndex = 42;
             // 
             // emailTbox
             // 
-            emailTbox.Location = new Point(939, 467);
+            emailTbox.Location = new Point(922, 466);
             emailTbox.Name = "emailTbox";
             emailTbox.Size = new Size(125, 27);
             emailTbox.TabIndex = 43;
             // 
             // sifreTbox
             // 
-            sifreTbox.Location = new Point(939, 501);
+            sifreTbox.Location = new Point(922, 500);
             sifreTbox.Name = "sifreTbox";
             sifreTbox.Size = new Size(125, 27);
             sifreTbox.TabIndex = 44;
@@ -479,9 +481,9 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = Color.LightPink;
+            label6.BackColor = Color.Plum;
             label6.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(804, 575);
+            label6.Location = new Point(787, 574);
             label6.Name = "label6";
             label6.Size = new Size(63, 21);
             label6.TabIndex = 45;
@@ -489,7 +491,7 @@
             // 
             // bakiyeTbox
             // 
-            bakiyeTbox.Location = new Point(939, 536);
+            bakiyeTbox.Location = new Point(922, 535);
             bakiyeTbox.Name = "bakiyeTbox";
             bakiyeTbox.Size = new Size(125, 27);
             bakiyeTbox.TabIndex = 48;
@@ -499,7 +501,7 @@
             bakiyeYukleButton.BackColor = Color.PaleGreen;
             bakiyeYukleButton.FlatStyle = FlatStyle.Popup;
             bakiyeYukleButton.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            bakiyeYukleButton.Location = new Point(804, 535);
+            bakiyeYukleButton.Location = new Point(787, 534);
             bakiyeYukleButton.Name = "bakiyeYukleButton";
             bakiyeYukleButton.Size = new Size(110, 29);
             bakiyeYukleButton.TabIndex = 49;
@@ -511,17 +513,17 @@
             // 
             sepetimLbox.FormattingEnabled = true;
             sepetimLbox.ItemHeight = 20;
-            sepetimLbox.Location = new Point(804, 72);
+            sepetimLbox.Location = new Point(761, 71);
             sepetimLbox.Name = "sepetimLbox";
-            sepetimLbox.Size = new Size(273, 244);
+            sepetimLbox.Size = new Size(345, 244);
             sepetimLbox.TabIndex = 50;
             // 
             // bakiyeL
             // 
             bakiyeL.AutoSize = true;
-            bakiyeL.BackColor = Color.LightPink;
+            bakiyeL.BackColor = Color.Plum;
             bakiyeL.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            bakiyeL.Location = new Point(986, 575);
+            bakiyeL.Location = new Point(969, 574);
             bakiyeL.Name = "bakiyeL";
             bakiyeL.Size = new Size(19, 21);
             bakiyeL.TabIndex = 51;
@@ -530,9 +532,9 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.LightPink;
+            label7.BackColor = Color.Plum;
             label7.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(412, 40);
+            label7.Location = new Point(352, 38);
             label7.Name = "label7";
             label7.Size = new Size(66, 21);
             label7.TabIndex = 52;
@@ -541,9 +543,9 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.BackColor = Color.LightPink;
+            label8.BackColor = Color.Plum;
             label8.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(786, 39);
+            label8.Location = new Point(747, 38);
             label8.Name = "label8";
             label8.Size = new Size(67, 21);
             label8.TabIndex = 53;
@@ -552,9 +554,9 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.BackColor = Color.LightPink;
+            label9.BackColor = Color.Plum;
             label9.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(44, 39);
+            label9.Location = new Point(24, 39);
             label9.Name = "label9";
             label9.Size = new Size(63, 21);
             label9.TabIndex = 54;
@@ -563,20 +565,34 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.BackColor = Color.LightPink;
+            label10.BackColor = Color.Plum;
             label10.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(786, 409);
+            label10.Location = new Point(769, 408);
             label10.Name = "label10";
             label10.Size = new Size(74, 21);
             label10.TabIndex = 55;
             label10.Text = "Hesabım";
             // 
+            // cikarmaButton
+            // 
+            cikarmaButton.BackColor = Color.LightCoral;
+            cikarmaButton.FlatStyle = FlatStyle.Popup;
+            cikarmaButton.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            cikarmaButton.Location = new Point(785, 321);
+            cikarmaButton.Name = "cikarmaButton";
+            cikarmaButton.Size = new Size(85, 29);
+            cikarmaButton.TabIndex = 56;
+            cikarmaButton.Text = "Çıkart";
+            cikarmaButton.UseVisualStyleBackColor = false;
+            cikarmaButton.Click += cikarmaButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SteelBlue;
+            BackColor = Color.Gray;
             ClientSize = new Size(1130, 658);
+            Controls.Add(cikarmaButton);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -675,5 +691,6 @@
         private Label label8;
         private Label label9;
         private Label label10;
+        private Button cikarmaButton;
     }
 }

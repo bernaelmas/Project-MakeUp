@@ -13,6 +13,20 @@ namespace ProjeFrontDeneme
             InitializeCheckBoxes();
             InitializeUrunler();
             Filtrele();
+
+            urunlerLbox.SelectedIndexChanged += UrunlerLbox_SelectedIndexChanged;
+        }
+
+        private void UrunlerLbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (urunlerLbox.SelectedIndex != -1)
+            {
+                Urun selectedUrun = (Urun)urunlerLbox.SelectedItem;
+
+                urunList.Add(selectedUrun);
+
+                urunlerLbox.ClearSelected();
+            }
         }
 
         private void InitializeCheckBoxes()
@@ -49,32 +63,66 @@ namespace ProjeFrontDeneme
         {
             urunList = new List<Urun>()
             {
-                new TenUrun("Maybelline", "Fondöten", "Açýk"),
-                new TenUrun("Golden Rose", "Fondöten", "Orta"),
-                new TenUrun("L'Oreal Paris", "Fondöten", "Koyu"),
-                new TenUrun("Maybelline", "Kapatýcý", "Açýk"),
-                new TenUrun("Wet'n Wild", "Kapatýcý", "Orta"),
-                new TenUrun("Flormar", "Kapatýcý", "Koyu"),
-                new TenUrun("Golden Rose", "Allýk", "Pembe"),
-                new TenUrun("L'Oreal Paris", "Allýk", "Kýrmýzý"),
-                new TenUrun("Flormar", "Allýk", "Turuncu"),
-                new DudakUrun("Maybelline", "Ruj", "Kýrmýzý"),
-                new DudakUrun("Golden Rose", "Ruj", "Pembe"),
-                new DudakUrun("Flormar", "Ruj", "Mor"),
-                new DudakUrun("Wet'n Wild", "Dudak Parlatýcýsý", "Pembe"),
-                new DudakUrun("Maybelline", "Dudak Parlatýcýsý", "Turuncu"),
-                new DudakUrun("L'Oreal Paris", "Dudak Parlatýcýsý", "Kýrmýzý"),
-                new DudakUrun("Golden Rose", "Dudak Kalemi", "Kýrmýzý"),
-                new DudakUrun("Flormar", "Dudak Kalemi", "Pembe"),
-                new DudakUrun("Wet'n Wild", "Dudak Kalemi", "Kahve"),
-                new GozUrun("Maybelline", "Maskara", "Siyah"),
-                new GozUrun("L'Oreal Paris", "Göz Kalemi", "Kahverengi"),
-                new GozUrun("Golden Rose", "Eyeliner", "Mavi"),
-                new GozUrun("Wet'n Wild", "Maskara", "Beyaz"),
-                new TirnakUrun("Flormar", "Oje", "Kýrmýzý"),
-                new TirnakUrun("L'Oreal Paris", "Aseton", "Pembe"),
-                new TirnakUrun("Wet'n Wild", "Bakým Ürünleri", "Beyaz"),
-                new TirnakUrun("Maybelline", "Oje", "Siyah")
+                new TenUrun("Maybelline", "Fondöten", "Açýk", 300),
+                new TenUrun("Maybelline", "Fondöten", "Orta", 300),
+                new TenUrun("Maybelline", "Kapatýcý", "Orta", 290),
+                new TenUrun("Maybelline", "Allýk", "Kýrmýzý", 200),
+                new TenUrun("L'Oreal Paris", "Fondöten", "Orta", 350),
+                new TenUrun("L'Oreal Paris", "Kapatýcý", "Açýk", 320),
+                new TenUrun("L'Oreal Paris", "Kapatýcý", "Koyu", 320),
+                new TenUrun("L'Oreal Paris", "Allýk", "Pembe", 200),
+                new TenUrun("Flormar", "Fondöten", "Açýk", 250),
+                new TenUrun("Flormar", "Kapatýcý", "Koyu", 250),
+                new TenUrun("Flormar", "Allýk", "Pembe", 170),
+                new TenUrun("Flormar", "Allýk", "Turuncu", 170),
+                new TenUrun("Golden Rose", "Fondöten", "Orta", 180),
+                new TenUrun("Golden Rose", "Fondöten", "Koyu", 180),
+                new TenUrun("Golden Rose", "Kapatýcý", "Açýk", 160),
+                new TenUrun("Golden Rose", "Allýk", "Kýrmýzý", 150),
+                new TenUrun("Wet'n Wild", "Fondöten", "Açýk", 250),
+                new TenUrun("Wet'n Wild", "Fondöten", "Koyu", 250),
+                new TenUrun("Wet'n Wild", "Kapatýcý", "Orta", 200),
+                new TenUrun("Wet'n Wild", "Allýk", "Turuncu", 130),
+                new DudakUrun("Maybelline", "Ruj", "Kýrmýzý", 320),
+                new DudakUrun("Maybelline", "Dudak Kalemi ", "Pembe", 240),
+                new DudakUrun("Maybelline", "Dudak Parlatýcýsý", "Beyaz", 200),
+                new DudakUrun("L'Oreal Paris", "Ruj", "Kahve", 300),
+                new DudakUrun("L'Oreal Paris", "Dudak Kalemi", "Mor", 210),
+                new DudakUrun("L'Oreal Paris", "Dudak Parlatýcýsý", "Þeftali", 180),
+                new DudakUrun("Flormar", "Ruj", "Pembe", 190),
+                new DudakUrun("Flormar", "Dudak Kalemi", "Kýrmýzý", 120),
+                new DudakUrun("Flormar", "Dudak Parlatýcýsý", "Beyaz", 110),
+                new DudakUrun("Golden Rose", "Ruj", "Þeftali", 170),
+                new DudakUrun("Golden Rose", "Dudak Kalemi", "Kahve", 45),
+                new DudakUrun("Golden Rose", "Dudak Parlatýcýsý", "Kýrmýzý", 140),
+                new DudakUrun("Wet'n Wild", "Ruj", "Mor", 210),
+                new DudakUrun("Wet'n Wild", "Dudak Kalemi", "Þeftali", 180),
+                new DudakUrun("Wet'n Wild", "Dudak Parlatýcýsý", "Pembe", 140),
+                new GozUrun("Maybelline", "Maskara", "Siyah", 330),
+                new GozUrun("Maybelline", "Eyeliner", "Kahverengi", 150),
+                new GozUrun("Maybelline", "Far Paleti", "Soðuk Tonlar", 240),
+                new GozUrun("L'Oreal Paris", "Maskara", "Kahverengi", 250),
+                new GozUrun("L'Oreal Paris", "Eyeliner", "Mavi", 130),
+                new GozUrun("L'Oreal Paris", "Far Paleti", "Sýcak Tonlar", 250),
+                new GozUrun("Flormar", "Maskara", "Mavi", 270),
+                new GozUrun("Flormar", "Eyeliner", "Siyah", 140),
+                new GozUrun("Flormar", "Far Paleti", "Renkli", 200),
+                new GozUrun("Golden Rose", "Maskara", "Siyah", 85),
+                new GozUrun("Golden Rose", "Eyeliner", "Mavi", 50),
+                new GozUrun("Golden Rose", "Far Paleti", "Sýcak Tonlar", 100),
+                new GozUrun("Wet'n Wild", "Maskara", "Beyaz", 380),
+                new GozUrun("Wet'n Wild", "Eyeliner", "Siyah", 380),
+                new GozUrun("Wet'n Wild", "Far Paleti", "Soðuk Tonlar", 380),
+                new TirnakUrun("Flormar", "Oje", "Kýrmýzý", 50),
+                new TirnakUrun("Flormar", "Oje", "Mavi", 50),
+                new TirnakUrun("Flormar", "Aseton", "Pembe", 80),
+                new TirnakUrun("Golden Rose", "Oje", "Yeþil", 45),
+                new TirnakUrun("Golden Rose", "Oje", "Kýrmýzý", 45),
+                new TirnakUrun("Golden Rose", "Aseton", "Turuncu", 70),
+                new TirnakUrun("Wet'n Wild", "Oje", "Bordo", 45),
+                new TirnakUrun("Wet'n Wild", "Aseton", "Yeþil", 50),
+                new TirnakUrun("Wet'n Wild", "Bakým Ürünleri", "Beyaz", 120),
+                new TirnakUrun("Wet'n Wild", "Bakým Ürünleri", "Siyah", 120)
             };
         }
 
@@ -84,71 +132,223 @@ namespace ProjeFrontDeneme
         }
         private void Filtrele()
         {
-            urunlerLbox.Items.Clear(); // önce listeyi temizle
+            urunlerLbox.Items.Clear();
 
+            foreach (var urun in urunList)
+            {
+                if (IsCategorySelected(urun) || IsSubcategorySelected(urun) || IsBrandcategorySelected(urun))
+                {
+                    urunlerLbox.Items.Add(urun);
+                }
+            }
         }
-        
+
+        private bool IsCategorySelected(Urun urun)
+        {
+            if (urun is TenUrun && tenCbox.Checked)
+            {
+                return true;
+            }
+            else if (urun is GozUrun && gozCbox.Checked)
+            {
+                return true;
+            }
+            else if (urun is DudakUrun && dudakCbox.Checked)
+            {
+                return true;
+            }
+            else if (urun is TirnakUrun && tirnakCbox.Checked)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsSubcategorySelected(Urun urun)
+        {
+            if (urun is TenUrun tenUrun)
+            {
+                if (fondotenCbox.Checked && tenUrun.altKategori == "Fondöten")
+                {
+                    return true;
+                }
+                else if (kapaticiCbox.Checked && tenUrun.altKategori == "Kapatýcý")
+                {
+                    return true;
+                }
+                else if (allikCbox.Checked && tenUrun.altKategori == "Allýk")
+                {
+                    return true;
+                }
+            }
+            else if (urun is GozUrun gozUrun)
+            {
+                if (maskaraCbox.Checked && gozUrun.altKategori == "Maskara")
+                {
+                    return true;
+                }
+                else if (eyelinerCbox.Checked && gozUrun.altKategori == "Eyeliner")
+                {
+                    return true;
+                }
+                else if (farCbox.Checked && gozUrun.altKategori == "Far Paleti")
+                {
+                    return true;
+                }
+            }
+            else if (urun is DudakUrun dudakUrun)
+            {
+                if (rujCbox.Checked && dudakUrun.altKategori == "Ruj")
+                {
+                    return true;
+                }
+                else if (dKalemCbox.Checked && dudakUrun.altKategori == "Dudak Kalemi")
+                {
+                    return true;
+                }
+                else if (dParlaCbox.Checked && dudakUrun.altKategori == "Dudak Parlatýcýsý")
+                {
+                    return true;
+                }
+            }
+            else if (urun is TirnakUrun tirnakUrun)
+            {
+                if (ojeCbox.Checked && tirnakUrun.altKategori == "Oje")
+                {
+                    return true;
+                }
+                else if (asetonCbox.Checked && tirnakUrun.altKategori == "Aseton")
+                {
+                    return true;
+                }
+                else if (bakimCbox.Checked && tirnakUrun.altKategori == "Bakým Ürünleri")
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool IsBrandcategorySelected(Urun urun)
+        {
+            if (urun is TenUrun tenUrun)
+            {
+                if (maybellineCbox.Checked && tenUrun.marka == "Maybelline")
+                {
+                    return true;
+                }
+                else if (lorealCbox.Checked && tenUrun.marka == "L'Oreal Paris")
+                {
+                    return true;
+                }
+                else if (flormarCbox.Checked && tenUrun.marka == "Flormar")
+                {
+                    return true;
+                }
+                else if (goldenCbox.Checked && tenUrun.marka == "Golden Rose")
+                {
+                    return true;
+                }
+                else if (wetCbox.Checked && tenUrun.marka == "Wet'n Wild")
+                {
+                    return true;
+                }
+            }
+            else if (urun is GozUrun gozUrun)
+            {
+                if (maybellineCbox.Checked && gozUrun.marka == "Maybelline")
+                {
+                    return true;
+                }
+                else if (lorealCbox.Checked && gozUrun.marka == "L'Oreal Paris")
+                {
+                    return true;
+                }
+                else if (flormarCbox.Checked && gozUrun.marka == "Flormar")
+                {
+                    return true;
+                }
+                else if (goldenCbox.Checked && gozUrun.marka == "Golden Rose")
+                {
+                    return true;
+                }
+                else if (wetCbox.Checked && gozUrun.marka == "Wet'n Wild")
+                {
+                    return true;
+                }
+            }
+            else if (urun is DudakUrun dudakUrun)
+            {
+                if (maybellineCbox.Checked && dudakUrun.marka == "Maybelline")
+                {
+                    return true;
+                }
+                else if (lorealCbox.Checked && dudakUrun.marka == "L'Oreal Paris")
+                {
+                    return true;
+                }
+                else if (flormarCbox.Checked && dudakUrun.marka == "Flormar")
+                {
+                    return true;
+                }
+                else if (goldenCbox.Checked && dudakUrun.marka == "Golden Rose")
+                {
+                    return true;
+                }
+                else if (wetCbox.Checked && dudakUrun.marka == "Wet'n Wild")
+                {
+                    return true;
+                }
+            }
+            else if (urun is TirnakUrun tirnakUrun)
+            {
+                if (maybellineCbox.Checked && tirnakUrun.marka == "Maybelline")
+                {
+                    return true;
+                }
+                else if (lorealCbox.Checked && tirnakUrun.marka == "L'Oreal Paris")
+                {
+                    return true;
+                }
+                else if (flormarCbox.Checked && tirnakUrun.marka == "Flormar")
+                {
+                    return true;
+                }
+                else if (goldenCbox.Checked && tirnakUrun.marka == "Golden Rose")
+                {
+                    return true;
+                }
+                else if (wetCbox.Checked && tirnakUrun.marka == "Wet'n Wild")
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private void urunlerLbox_MouseClick(object sender, MouseEventArgs e)
+        {
+            int selectedIndex = urunlerLbox.IndexFromPoint(e.Location);
+
+            if (selectedIndex != ListBox.NoMatches)
+            {
+                Urun selectedUrun = (Urun)urunlerLbox.Items[selectedIndex];
+
+                sepetimLbox.Items.Add(selectedUrun);
+            }
+        }
+        private void cikarmaButton_Click(object sender, EventArgs e)
+        {
+            if (sepetimLbox.SelectedIndex != -1)
+            {
+                Urun selectedUrun = (Urun)sepetimLbox.SelectedItem;
+
+                sepetimLbox.Items.Remove(selectedUrun);
+            }
+        }
+
     }
 }
-
-/*private void UrunleriEkle()
-        {
-            
-            Urun urun1 = new Urun("Maybelline", "Ten", "Fondöten", "Açýk");
-            Urun urun2 = new Urun("Golden Rose", "Ten", "Fondöten", "Orta");
-            Urun urun3 = new Urun("L'Oreal Paris", "Ten", "Fondöten", "Koyu");
-            Urun urun4 = new Urun("Maybelline", "Ten", "Kapatýcý", "Açýk");
-            Urun urun5 = new Urun("Wet'n Wild", "Ten", "Kapatýcý", "Orta");
-            Urun urun6 = new Urun("Flormar", "Ten", "Kapatýcý", "Koyu");
-            Urun urun7 = new Urun("Golden Rose", "Ten", "Allýk", "Pembe");
-            Urun urun8 = new Urun("L'Oreal Paris", "Ten", "Allýk", "Kýrmýzý");
-            Urun urun9 = new Urun("Flormar", "Ten", "Allýk", "Turuncu");
-            Urun urun10 = new Urun("Maybelline", "Dudak", "Ruj", "Kýrmýzý");
-            Urun urun11 = new Urun("Golden Rose", "Dudak", "Ruj", "Pembe");
-            Urun urun12 = new Urun("Flormar", "Dudak", "Ruj", "Mor");
-            Urun urun13 = new Urun("Wet'n Wild", "Dudak", "Dudak Parlatýcýsý", "Pembe");
-            Urun urun14 = new Urun("Maybelline", "Dudak", "Dudak Parlatýcýsý", "Turuncu");
-            Urun urun15 = new Urun("L'Oreal Paris", "Dudak", "Dudak Parlatýcýsý", "Kýrmýzý");
-            Urun urun16 = new Urun("Golden Rose", "Dudak", "Dudak Kalemi", "Kýrmýzý");
-            Urun urun17 = new Urun("Flormar", "Dudak", "Dudak Kalemi", "Pembe");
-            Urun urun18 = new Urun("Wet'n Wild", "Dudak", "Dudak Kalemi", "Kahve");
-            Urun urun19 = new Urun("Maybelline", "Göz", "Maskara", "Siyah");
-            Urun urun20 = new Urun("L'Oreal Paris", "Göz", "Göz Kalemi", "Kahverengi");
-            Urun urun21 = new Urun("Golden Rose", "Göz", "Eyeliner", "Mavi");
-            Urun urun22 = new Urun("Wet'n Wild", "Göz", "Maskara", "Beyaz");
-            Urun urun23 = new Urun("Flormar", "Týrnak", "Oje", "Kýrmýzý");
-            Urun urun24 = new Urun("L'Oreal Paris", "Týrnak", "Aseton", "Pembe");
-            Urun urun25 = new Urun("Wet'n Wild", "Týrnak", "Bakým Ürünleri", "Beyaz");
-            Urun urun26 = new Urun("Maybelline", "Týrnak", "Oje", "Siyah");
-            
-        List<Urun> urunList = new List<Urun>()
-            {
-                new Urun("Maybelline", "Ten", "Fondöten", "Açýk"),
-                new Urun("Golden Rose", "Ten", "Fondöten", "Orta"),
-                new Urun("L'Oreal Paris", "Ten", "Fondöten", "Koyu"),
-                new Urun("Maybelline", "Ten", "Kapatýcý", "Açýk"),
-                new Urun("Wet'n Wild", "Ten", "Kapatýcý", "Orta"),
-                new Urun("Flormar", "Ten", "Kapatýcý", "Koyu"),
-                new Urun("Golden Rose", "Ten", "Allýk", "Pembe"),
-                new Urun("L'Oreal Paris", "Ten", "Allýk", "Kýrmýzý"),
-                new Urun("Flormar", "Ten", "Allýk", "Turuncu"),
-                new Urun("Maybelline", "Dudak", "Ruj", "Kýrmýzý"),
-                new Urun("Golden Rose", "Dudak", "Ruj", "Pembe"),
-                new Urun("Flormar", "Dudak", "Ruj", "Mor"),
-                new Urun("Wet'n Wild", "Dudak", "Dudak Parlatýcýsý", "Pembe"),
-                new Urun("Maybelline", "Dudak", "Dudak Parlatýcýsý", "Turuncu"),
-                new Urun("L'Oreal Paris", "Dudak", "Dudak Parlatýcýsý", "Kýrmýzý"),
-                new Urun("Golden Rose", "Dudak", "Dudak Kalemi", "Kýrmýzý"),
-                new Urun("Flormar", "Dudak", "Dudak Kalemi", "Pembe"),
-                new Urun("Wet'n Wild", "Dudak", "Dudak Kalemi", "Kahve"),
-                new Urun("Maybelline", "Göz", "Maskara", "Siyah"),
-                new Urun("L'Oreal Paris", "Göz", "Göz Kalemi", "Kahverengi"),
-                new Urun("Golden Rose", "Göz", "Eyeliner", "Mavi"),
-                new Urun("Wet'n Wild", "Göz", "Maskara", "Beyaz"),
-                new Urun("Flormar", "Týrnak", "Oje", "Kýrmýzý"),
-                new Urun("L'Oreal Paris", "Týrnak", "Aseton", "Pembe"),
-                new Urun("Wet'n Wild", "Týrnak", "Bakým Ürünleri", "Beyaz"),
-                new Urun("Maybelline", "Týrnak", "Oje", "Siyah")
-            };
-        }
-        */
