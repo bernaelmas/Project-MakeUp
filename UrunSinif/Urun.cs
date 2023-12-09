@@ -7,43 +7,15 @@ using System.Threading.Tasks;
 
 namespace UrunSinif
 {
-    public class Urun
+    public abstract class Urun
     {
-        private string marka;
-        private string kategori;
-        private string altKategori;
-        private bool secildi;
-        private string urunRengi;
+        protected string marka;
+        protected string altKategori;
+        protected bool secildi;
 
-        public Urun (string marka, string kategori, string altKategori, string urunRengi)
+        public override string ToString()
         {
-            this.marka = marka;
-            this.kategori = kategori;
-            this.altKategori = altKategori;
-            this.urunRengi = urunRengi;
-            this.secildi = false;
+            return marka + " - " + altKategori;
         }
-        public override string ToString(){
-            return $"{marka} - {urunRengi} {altKategori}";}
-        public string GetMarka(){
-            return marka;}
-        public void SetMarka(string marka){
-            this.marka = marka;}
-        public string GetKategori(){
-            return kategori;}
-        public void SetKategori(string kategori){
-            this.kategori = kategori;}
-        public string GetAltKategori(){
-            return altKategori;}
-        public void SetAltKategori(string altkategori){
-            this.altKategori = altkategori;}
-        public bool GetSecildi(){
-            return secildi; }
-        public void SetSecildi(bool secildi){
-            this.secildi = secildi; }
-        public string GetUrunRengi(){
-            return urunRengi;}
-        public void SetUrunRengi(string urunRengi){
-            this.urunRengi = urunRengi;}
     }
 }

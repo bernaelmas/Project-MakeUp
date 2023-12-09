@@ -5,9 +5,18 @@ namespace ProjeFrontDeneme
 {
     public partial class Form1 : Form
     {
+
+        private List<Urun> urunList;
         public Form1()
         {
             InitializeComponent();
+            InitializeCheckBoxes();
+            InitializeUrunler();
+            Filtrele();
+        }
+
+        private void InitializeCheckBoxes()
+        {
             tenCbox.CheckedChanged += CheckBox_CheckedChanged;
             gozCbox.CheckedChanged += CheckBox_CheckedChanged;
             dudakCbox.CheckedChanged += CheckBox_CheckedChanged;
@@ -36,76 +45,55 @@ namespace ProjeFrontDeneme
             wetCbox.CheckedChanged += CheckBox_CheckedChanged;
         }
 
+        private void InitializeUrunler()
+        {
+            urunList = new List<Urun>()
+            {
+                new TenUrun("Maybelline", "Fondöten", "Açýk"),
+                new TenUrun("Golden Rose", "Fondöten", "Orta"),
+                new TenUrun("L'Oreal Paris", "Fondöten", "Koyu"),
+                new TenUrun("Maybelline", "Kapatýcý", "Açýk"),
+                new TenUrun("Wet'n Wild", "Kapatýcý", "Orta"),
+                new TenUrun("Flormar", "Kapatýcý", "Koyu"),
+                new TenUrun("Golden Rose", "Allýk", "Pembe"),
+                new TenUrun("L'Oreal Paris", "Allýk", "Kýrmýzý"),
+                new TenUrun("Flormar", "Allýk", "Turuncu"),
+                new DudakUrun("Maybelline", "Ruj", "Kýrmýzý"),
+                new DudakUrun("Golden Rose", "Ruj", "Pembe"),
+                new DudakUrun("Flormar", "Ruj", "Mor"),
+                new DudakUrun("Wet'n Wild", "Dudak Parlatýcýsý", "Pembe"),
+                new DudakUrun("Maybelline", "Dudak Parlatýcýsý", "Turuncu"),
+                new DudakUrun("L'Oreal Paris", "Dudak Parlatýcýsý", "Kýrmýzý"),
+                new DudakUrun("Golden Rose", "Dudak Kalemi", "Kýrmýzý"),
+                new DudakUrun("Flormar", "Dudak Kalemi", "Pembe"),
+                new DudakUrun("Wet'n Wild", "Dudak Kalemi", "Kahve"),
+                new GozUrun("Maybelline", "Maskara", "Siyah"),
+                new GozUrun("L'Oreal Paris", "Göz Kalemi", "Kahverengi"),
+                new GozUrun("Golden Rose", "Eyeliner", "Mavi"),
+                new GozUrun("Wet'n Wild", "Maskara", "Beyaz"),
+                new TirnakUrun("Flormar", "Oje", "Kýrmýzý"),
+                new TirnakUrun("L'Oreal Paris", "Aseton", "Pembe"),
+                new TirnakUrun("Wet'n Wild", "Bakým Ürünleri", "Beyaz"),
+                new TirnakUrun("Maybelline", "Oje", "Siyah")
+            };
+        }
+
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             Filtrele();
         }
         private void Filtrele()
         {
-            List<Urun> urunList = new List<Urun>()
-            {
-                new Urun("Maybelline", "Ten", "Fondöten", "Açýk"),
-                new Urun("Golden Rose", "Ten", "Fondöten", "Orta"),
-                new Urun("L'Oreal Paris", "Ten", "Fondöten", "Koyu"),
-                new Urun("Maybelline", "Ten", "Kapatýcý", "Açýk"),
-                new Urun("Wet'n Wild", "Ten", "Kapatýcý", "Orta"),
-                new Urun("Flormar", "Ten", "Kapatýcý", "Koyu"),
-                new Urun("Golden Rose", "Ten", "Allýk", "Pembe"),
-                new Urun("L'Oreal Paris", "Ten", "Allýk", "Kýrmýzý"),
-                new Urun("Flormar", "Ten", "Allýk", "Turuncu"),
-                new Urun("Maybelline", "Dudak", "Ruj", "Kýrmýzý"),
-                new Urun("Golden Rose", "Dudak", "Ruj", "Pembe"),
-                new Urun("Flormar", "Dudak", "Ruj", "Mor"),
-                new Urun("Wet'n Wild", "Dudak", "Dudak Parlatýcýsý", "Pembe"),
-                new Urun("Maybelline", "Dudak", "Dudak Parlatýcýsý", "Turuncu"),
-                new Urun("L'Oreal Paris", "Dudak", "Dudak Parlatýcýsý", "Kýrmýzý"),
-                new Urun("Golden Rose", "Dudak", "Dudak Kalemi", "Kýrmýzý"),
-                new Urun("Flormar", "Dudak", "Dudak Kalemi", "Pembe"),
-                new Urun("Wet'n Wild", "Dudak", "Dudak Kalemi", "Kahve"),
-                new Urun("Maybelline", "Göz", "Maskara", "Siyah"),
-                new Urun("L'Oreal Paris", "Göz", "Göz Kalemi", "Kahverengi"),
-                new Urun("Golden Rose", "Göz", "Eyeliner", "Mavi"),
-                new Urun("Wet'n Wild", "Göz", "Maskara", "Beyaz"),
-                new Urun("Flormar", "Týrnak", "Oje", "Kýrmýzý"),
-                new Urun("L'Oreal Paris", "Týrnak", "Aseton", "Pembe"),
-                new Urun("Wet'n Wild", "Týrnak", "Bakým Ürünleri", "Beyaz"),
-                new Urun("Maybelline", "Týrnak", "Oje", "Siyah")
-            };
             urunlerLbox.Items.Clear(); // önce listeyi temizle
 
-            foreach (Urun urun in urunList)
-            {
-                if ((urun.GetMarka() == "Maybelline" && maybellineCbox.Checked) ||
-                    (urun.GetMarka() == "L'Oreal Paris" && lorealCbox.Checked) ||
-                    (urun.GetMarka() == "Golden Rose" && goldenCbox.Checked) ||
-                    (urun.GetMarka() == "Flormar" && flormarCbox.Checked) ||
-                    (urun.GetMarka() == "Wet'n Wild" && wetCbox.Checked) ||
-                    (urun.GetKategori() == "Ten" && tenCbox.Checked) ||
-                    (urun.GetKategori() == "Göz" && gozCbox.Checked) ||
-                    (urun.GetKategori() == "Dudak" && dudakCbox.Checked) ||
-                    (urun.GetKategori() == "Týrnak" && tirnakCbox.Checked) ||
-                    (urun.GetAltKategori() == "Fondöten" && fondotenCbox.Checked) ||
-                    (urun.GetAltKategori() == "Kapatýcý" && kapaticiCbox.Checked) ||
-                    (urun.GetAltKategori() == "Allýk" && allikCbox.Checked) ||
-                    (urun.GetAltKategori() == "Far" && farCbox.Checked) ||
-                    (urun.GetAltKategori() == "Eyeliner" && eyelinerCbox.Checked) ||
-                    (urun.GetAltKategori() == "Maskara" && maskaraCbox.Checked) ||
-                    (urun.GetAltKategori() == "Dudak Parlatýcýsý" && dParlaCbox.Checked) ||
-                    (urun.GetAltKategori() == "Dudak Kalemi" && dKalemCbox.Checked) ||
-                    (urun.GetAltKategori() == "Ruj" && rujCbox.Checked) ||
-                    (urun.GetAltKategori() == "Bakým Ürünleri" && bakimCbox.Checked) ||
-                    (urun.GetAltKategori() == "Aseton" && asetonCbox.Checked) ||
-                    (urun.GetAltKategori() == "Oje" && ojeCbox.Checked))
-                {
-                    urunlerLbox.Items.Add(urun); // sadece iþaretli özelliklere sahip ürünleri ekle
-                }
-            }
         }
+        
+    }
+}
 
-
-        private void UrunleriEkle()
+/*private void UrunleriEkle()
         {
-            /*
+            
             Urun urun1 = new Urun("Maybelline", "Ten", "Fondöten", "Açýk");
             Urun urun2 = new Urun("Golden Rose", "Ten", "Fondöten", "Orta");
             Urun urun3 = new Urun("L'Oreal Paris", "Ten", "Fondöten", "Koyu");
@@ -132,8 +120,8 @@ namespace ProjeFrontDeneme
             Urun urun24 = new Urun("L'Oreal Paris", "Týrnak", "Aseton", "Pembe");
             Urun urun25 = new Urun("Wet'n Wild", "Týrnak", "Bakým Ürünleri", "Beyaz");
             Urun urun26 = new Urun("Maybelline", "Týrnak", "Oje", "Siyah");
-            */
-            List<Urun> urunList = new List<Urun>()
+            
+        List<Urun> urunList = new List<Urun>()
             {
                 new Urun("Maybelline", "Ten", "Fondöten", "Açýk"),
                 new Urun("Golden Rose", "Ten", "Fondöten", "Orta"),
@@ -163,7 +151,4 @@ namespace ProjeFrontDeneme
                 new Urun("Maybelline", "Týrnak", "Oje", "Siyah")
             };
         }
-
-
-    }
-}
+        */

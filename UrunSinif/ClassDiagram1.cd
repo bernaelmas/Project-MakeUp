@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UrunSinif.DudakUrun">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DudakUrun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UrunSinif.GozUrun">
+    <Position X="8.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>GozUrun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UrunSinif.TenUrun">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TenUrun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UrunSinif.TirnakUrun">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TirnakUrun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UrunSinif.Urun">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBAAAAAEAEAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Urun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
