@@ -8,11 +8,13 @@ namespace UrunSinif
 {
     public class GozUrun : Urun
     {
-        public string marka;
-        public string altKategori;
-        public string renk;
-        public int fiyat;
-        public GozUrun(string marka, string altKategori, string renk, int fiyat)
+        /*
+         public string marka { get; set; }
+         public string altKategori { get; set; }
+         public decimal fiyat { get; set; }
+        */
+        public string renk { get; set; }
+        public GozUrun(string marka, string altKategori, string renk, decimal fiyat)
         {
             this.marka = marka;
             this.altKategori = altKategori;
@@ -21,7 +23,7 @@ namespace UrunSinif
         }
         public override string ToString()
         {
-            return base.ToString() + marka + " - " + altKategori + " - " + renk + " = " + fiyat.ToString();
+            return base.ToString() + marka + " - " + altKategori + " - " + renk + " = " + fiyat.ToString("N");
         }
     }
 }

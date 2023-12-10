@@ -350,5 +350,24 @@ namespace ProjeFrontDeneme
             }
         }
 
+        private void hesaplaButton_Click(object sender, EventArgs e)
+        {
+            decimal toplamFiyat = ToplamFiyatHesapla();
+            toplamTbox.Text = toplamFiyat.ToString("N");
+        }
+        private decimal ToplamFiyatHesapla()
+        {
+            decimal toplamFiyat = 0;
+
+            foreach(var item in sepetimLbox.Items)
+            {
+                if (item is Urun urun)
+                {
+                    toplamFiyat += urun.fiyat;
+                }
+            }
+
+            return toplamFiyat;
+        }
     }
 }

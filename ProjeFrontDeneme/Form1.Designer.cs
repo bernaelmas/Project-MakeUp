@@ -423,6 +423,7 @@
             hesaplaButton.TabIndex = 38;
             hesaplaButton.Text = "Hesapla";
             hesaplaButton.UseVisualStyleBackColor = false;
+            hesaplaButton.Click += hesaplaButton_Click;
             // 
             // label3
             // 
