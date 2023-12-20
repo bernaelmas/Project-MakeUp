@@ -74,6 +74,7 @@
             label9 = new Label();
             label10 = new Label();
             cikarmaButton = new Button();
+            kayitButton = new Button();
             SuspendLayout();
             // 
             // Makyaj
@@ -115,9 +116,9 @@
             Hesabım.BorderStyle = BorderStyle.None;
             Hesabım.FormattingEnabled = true;
             Hesabım.ItemHeight = 20;
-            Hesabım.Location = new Point(769, 408);
+            Hesabım.Location = new Point(747, 404);
             Hesabım.Name = "Hesabım";
-            Hesabım.Size = new Size(320, 200);
+            Hesabım.Size = new Size(371, 220);
             Hesabım.TabIndex = 7;
             // 
             // tenCbox
@@ -430,7 +431,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Plum;
             label3.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(787, 431);
+            label3.Location = new Point(763, 425);
             label3.Name = "label3";
             label3.Size = new Size(87, 19);
             label3.TabIndex = 39;
@@ -441,7 +442,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Plum;
             label4.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(787, 466);
+            label4.Location = new Point(763, 458);
             label4.Name = "label4";
             label4.Size = new Size(67, 19);
             label4.TabIndex = 40;
@@ -452,7 +453,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Plum;
             label5.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(787, 500);
+            label5.Location = new Point(766, 492);
             label5.Name = "label5";
             label5.Size = new Size(48, 19);
             label5.TabIndex = 41;
@@ -460,21 +461,21 @@
             // 
             // adSoyadTbox
             // 
-            adSoyadTbox.Location = new Point(922, 431);
+            adSoyadTbox.Location = new Point(890, 421);
             adSoyadTbox.Name = "adSoyadTbox";
             adSoyadTbox.Size = new Size(125, 27);
             adSoyadTbox.TabIndex = 42;
             // 
             // emailTbox
             // 
-            emailTbox.Location = new Point(922, 466);
+            emailTbox.Location = new Point(890, 453);
             emailTbox.Name = "emailTbox";
             emailTbox.Size = new Size(125, 27);
             emailTbox.TabIndex = 43;
             // 
             // sifreTbox
             // 
-            sifreTbox.Location = new Point(922, 500);
+            sifreTbox.Location = new Point(890, 486);
             sifreTbox.Name = "sifreTbox";
             sifreTbox.Size = new Size(125, 27);
             sifreTbox.TabIndex = 44;
@@ -484,7 +485,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Plum;
             label6.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(787, 574);
+            label6.Location = new Point(766, 531);
             label6.Name = "label6";
             label6.Size = new Size(63, 21);
             label6.TabIndex = 45;
@@ -492,7 +493,7 @@
             // 
             // bakiyeTbox
             // 
-            bakiyeTbox.Location = new Point(922, 535);
+            bakiyeTbox.Location = new Point(766, 577);
             bakiyeTbox.Name = "bakiyeTbox";
             bakiyeTbox.Size = new Size(125, 27);
             bakiyeTbox.TabIndex = 48;
@@ -502,7 +503,7 @@
             bakiyeYukleButton.BackColor = Color.PaleGreen;
             bakiyeYukleButton.FlatStyle = FlatStyle.Popup;
             bakiyeYukleButton.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            bakiyeYukleButton.Location = new Point(787, 534);
+            bakiyeYukleButton.Location = new Point(922, 575);
             bakiyeYukleButton.Name = "bakiyeYukleButton";
             bakiyeYukleButton.Size = new Size(110, 29);
             bakiyeYukleButton.TabIndex = 49;
@@ -524,7 +525,7 @@
             bakiyeL.AutoSize = true;
             bakiyeL.BackColor = Color.Plum;
             bakiyeL.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            bakiyeL.Location = new Point(969, 574);
+            bakiyeL.Location = new Point(939, 531);
             bakiyeL.Name = "bakiyeL";
             bakiyeL.Size = new Size(19, 21);
             bakiyeL.TabIndex = 51;
@@ -568,7 +569,7 @@
             label10.AutoSize = true;
             label10.BackColor = Color.Plum;
             label10.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(769, 408);
+            label10.Location = new Point(747, 404);
             label10.Name = "label10";
             label10.Size = new Size(74, 21);
             label10.TabIndex = 55;
@@ -587,12 +588,25 @@
             cikarmaButton.UseVisualStyleBackColor = false;
             cikarmaButton.Click += cikarmaButton_Click;
             // 
+            // kayitButton
+            // 
+            kayitButton.BackColor = Color.PaleGreen;
+            kayitButton.FlatStyle = FlatStyle.Popup;
+            kayitButton.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            kayitButton.Location = new Point(1041, 436);
+            kayitButton.Name = "kayitButton";
+            kayitButton.Size = new Size(65, 55);
+            kayitButton.TabIndex = 57;
+            kayitButton.Text = "Kayıt";
+            kayitButton.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(1130, 658);
+            Controls.Add(kayitButton);
             Controls.Add(cikarmaButton);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -693,5 +707,6 @@
         private Label label9;
         private Label label10;
         private Button cikarmaButton;
+        private Button kayitButton;
     }
 }

@@ -130,6 +130,7 @@ namespace ProjeFrontDeneme
         {
             Filtrele();
         }
+
         private void Filtrele()
         {
             urunlerLbox.Items.Clear();
@@ -340,6 +341,7 @@ namespace ProjeFrontDeneme
                 sepetimLbox.Items.Add(selectedUrun);
             }
         }
+
         private void cikarmaButton_Click(object sender, EventArgs e)
         {
             if (sepetimLbox.SelectedIndex != -1)
@@ -355,11 +357,12 @@ namespace ProjeFrontDeneme
             decimal toplamFiyat = ToplamFiyatHesapla();
             toplamTbox.Text = toplamFiyat.ToString("N");
         }
+
         private decimal ToplamFiyatHesapla()
         {
             decimal toplamFiyat = 0;
 
-            foreach(var item in sepetimLbox.Items)
+            foreach (var item in sepetimLbox.Items)
             {
                 if (item is Urun urun)
                 {

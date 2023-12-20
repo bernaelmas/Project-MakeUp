@@ -8,11 +8,6 @@ namespace UrunSinif
 {
     public class TirnakUrun : Urun
     {
-        /* 
-         public string marka { get; set; }
-         public string altKategori { get; set; }
-         public decimal fiyat { get; set; }
-        */
         public string renk { get; set; }
         public TirnakUrun(string marka, string altKategori, string renk, decimal fiyat)
         {
