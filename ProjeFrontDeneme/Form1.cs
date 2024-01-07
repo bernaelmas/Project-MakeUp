@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using UrunSinif;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjeFrontDeneme
 {
@@ -7,6 +8,7 @@ namespace ProjeFrontDeneme
     {
 
         private List<Urun> urunList;
+        public List<Kullanici> kullaniciList = new List<Kullanici>();
         public Form1()
         {
             InitializeComponent();
@@ -355,7 +357,7 @@ namespace ProjeFrontDeneme
         private void hesaplaButton_Click(object sender, EventArgs e)
         {
             decimal toplamFiyat = ToplamFiyatHesapla();
-            toplamTbox.Text = toplamFiyat.ToString("N");
+            toplamL.Text = toplamFiyat.ToString("N");
         }
 
         private decimal ToplamFiyatHesapla()
@@ -371,6 +373,101 @@ namespace ProjeFrontDeneme
             }
 
             return toplamFiyat;
+        }
+
+        private void kayitButton_Click(object sender, EventArgs e)
+        {
+
+            string adSoyad = adSoyadTbox.Text;
+            string sifre = sifreTbox.Text;
+
+            if (string.IsNullOrEmpty(adSoyad) || string.IsNullOrEmpty(sifre))
+            {
+                MessageBox.Show("Lütfen tüm alanlarý doldurun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            for (int i = 0; i < kullaniciList.Count; i++)
+            {
+                Kullanici kullanici1 = kullaniciList[i];
+                if (kullanici1.AdSoyad == adSoyad && kullanici1.Sifre == sifre)
+                {
+                    bakiyeL.Text = kullanici1.Bakiye.ToString();
+                    MessageBox.Show("Baþarýyla kullanýcý giriþi yapýldý.", "Baþarý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+
+            Kullanici kullanici = new Kullanici(adSoyad, sifre);
+            kullaniciList.Add(kullanici);
+            MessageBox.Show("Kullanýcý baþarýyla kaydedildi.", "Baþarý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void bakiyeYukleButton_Click(object sender, EventArgs e)
+        {
+            string adSoyad = adSoyadTbox.Text;
+            string sifre = sifreTbox.Text;
+
+            for (int i = 0; i < kullaniciList.Count; i++)
+            {
+                Kullanici kullanici1 = kullaniciList[i];
+                if (kullanici1.AdSoyad == adSoyad && kullanici1.Sifre == sifre)
+                {
+                    int toplam = 0;
+                    if (int.TryParse(bakiyeTbox.Text, out int toplam1))
+                    {
+                        toplam = toplam1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geçerli bir sayý deðeri giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    kullanici1.Bakiye += toplam;
+                    bakiyeL.Text = kullanici1.Bakiye.ToString();
+                    MessageBox.Show("Baþarýyla kullanýcýya bakiye yüklendi.", "Baþarý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+
+        }
+
+        private void satinAlButton_Click(object sender, EventArgs e)
+        {
+            string adSoyad = adSoyadTbox.Text;
+            string sifre = sifreTbox.Text;
+
+            for (int i = 0; i < kullaniciList.Count; i++)
+            {
+                Kullanici kullanici1 = kullaniciList[i];
+                if (kullanici1.AdSoyad == adSoyad && kullanici1.Sifre == sifre)
+                {
+                    double toplam = 0;
+                    if (double.TryParse(toplamL.Text, out double toplam1))
+                    {
+                        toplam = toplam1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geçerli bir sayý deðeri giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    if (kullanici1.Bakiye >= toplam)
+                    {
+                        kullanici1.Bakiye -= toplam;
+                        toplamL.Text = "0";
+                        bakiyeL.Text = kullanici1.Bakiye.ToString();
+                        sepetimLbox.Items.Clear();
+                        MessageBox.Show("Ürünler baþarýyla satýn alýndý.", "Baþarý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Yetersiz Bakiye.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

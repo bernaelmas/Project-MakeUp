@@ -56,13 +56,10 @@
             wetCbox = new CheckBox();
             urunlerLbox = new ListBox();
             label2 = new Label();
-            toplamTbox = new TextBox();
             hesaplaButton = new Button();
             label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
             adSoyadTbox = new TextBox();
-            emailTbox = new TextBox();
             sifreTbox = new TextBox();
             label6 = new Label();
             bakiyeTbox = new TextBox();
@@ -75,6 +72,8 @@
             label10 = new Label();
             cikarmaButton = new Button();
             kayitButton = new Button();
+            satinAlButton = new Button();
+            toplamL = new Label();
             SuspendLayout();
             // 
             // Makyaj
@@ -406,13 +405,6 @@
             label2.TabIndex = 36;
             label2.Text = "Toplam:";
             // 
-            // toplamTbox
-            // 
-            toplamTbox.Location = new Point(957, 358);
-            toplamTbox.Name = "toplamTbox";
-            toplamTbox.Size = new Size(132, 27);
-            toplamTbox.TabIndex = 37;
-            // 
             // hesaplaButton
             // 
             hesaplaButton.BackColor = Color.PaleGreen;
@@ -437,47 +429,29 @@
             label3.TabIndex = 39;
             label3.Text = "Ad - Soyad:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Plum;
-            label4.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(763, 458);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 19);
-            label4.TabIndex = 40;
-            label4.Text = "E-posta: ";
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Plum;
             label5.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(766, 492);
+            label5.Location = new Point(766, 457);
             label5.Name = "label5";
-            label5.Size = new Size(48, 19);
+            label5.Size = new Size(49, 19);
             label5.TabIndex = 41;
-            label5.Text = "Şifre: ";
+            label5.Text = "Sifre: ";
             // 
             // adSoyadTbox
             // 
-            adSoyadTbox.Location = new Point(890, 421);
+            adSoyadTbox.Location = new Point(856, 421);
             adSoyadTbox.Name = "adSoyadTbox";
-            adSoyadTbox.Size = new Size(125, 27);
+            adSoyadTbox.Size = new Size(112, 27);
             adSoyadTbox.TabIndex = 42;
-            // 
-            // emailTbox
-            // 
-            emailTbox.Location = new Point(890, 453);
-            emailTbox.Name = "emailTbox";
-            emailTbox.Size = new Size(125, 27);
-            emailTbox.TabIndex = 43;
             // 
             // sifreTbox
             // 
-            sifreTbox.Location = new Point(890, 486);
+            sifreTbox.Location = new Point(856, 457);
             sifreTbox.Name = "sifreTbox";
-            sifreTbox.Size = new Size(125, 27);
+            sifreTbox.Size = new Size(112, 27);
             sifreTbox.TabIndex = 44;
             // 
             // label6
@@ -485,7 +459,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Plum;
             label6.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(766, 531);
+            label6.Location = new Point(766, 528);
             label6.Name = "label6";
             label6.Size = new Size(63, 21);
             label6.TabIndex = 45;
@@ -493,9 +467,9 @@
             // 
             // bakiyeTbox
             // 
-            bakiyeTbox.Location = new Point(766, 577);
+            bakiyeTbox.Location = new Point(763, 566);
             bakiyeTbox.Name = "bakiyeTbox";
-            bakiyeTbox.Size = new Size(125, 27);
+            bakiyeTbox.Size = new Size(65, 27);
             bakiyeTbox.TabIndex = 48;
             // 
             // bakiyeYukleButton
@@ -503,13 +477,14 @@
             bakiyeYukleButton.BackColor = Color.PaleGreen;
             bakiyeYukleButton.FlatStyle = FlatStyle.Popup;
             bakiyeYukleButton.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            bakiyeYukleButton.Location = new Point(922, 575);
+            bakiyeYukleButton.Location = new Point(856, 566);
             bakiyeYukleButton.Name = "bakiyeYukleButton";
             bakiyeYukleButton.Size = new Size(110, 29);
             bakiyeYukleButton.TabIndex = 49;
             bakiyeYukleButton.Text = "Bakiye Yükle";
             bakiyeYukleButton.TextAlign = ContentAlignment.MiddleLeft;
             bakiyeYukleButton.UseVisualStyleBackColor = false;
+            bakiyeYukleButton.Click += bakiyeYukleButton_Click;
             // 
             // sepetimLbox
             // 
@@ -525,7 +500,7 @@
             bakiyeL.AutoSize = true;
             bakiyeL.BackColor = Color.Plum;
             bakiyeL.Font = new Font("Baskerville Old Face", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            bakiyeL.Location = new Point(939, 531);
+            bakiyeL.Location = new Point(890, 528);
             bakiyeL.Name = "bakiyeL";
             bakiyeL.Size = new Size(19, 21);
             bakiyeL.TabIndex = 51;
@@ -593,12 +568,36 @@
             kayitButton.BackColor = Color.PaleGreen;
             kayitButton.FlatStyle = FlatStyle.Popup;
             kayitButton.Font = new Font("Baskerville Old Face", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            kayitButton.Location = new Point(1041, 436);
+            kayitButton.Location = new Point(856, 490);
             kayitButton.Name = "kayitButton";
-            kayitButton.Size = new Size(65, 55);
+            kayitButton.Size = new Size(112, 27);
             kayitButton.TabIndex = 57;
             kayitButton.Text = "Kayıt";
             kayitButton.UseVisualStyleBackColor = false;
+            kayitButton.Click += kayitButton_Click;
+            // 
+            // satinAlButton
+            // 
+            satinAlButton.BackColor = Color.PaleGreen;
+            satinAlButton.FlatStyle = FlatStyle.Popup;
+            satinAlButton.Font = new Font("Baskerville Old Face", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            satinAlButton.Location = new Point(995, 456);
+            satinAlButton.Name = "satinAlButton";
+            satinAlButton.Size = new Size(94, 116);
+            satinAlButton.TabIndex = 58;
+            satinAlButton.Text = "SATIN AL";
+            satinAlButton.UseVisualStyleBackColor = false;
+            satinAlButton.Click += satinAlButton_Click;
+            // 
+            // toplamL
+            // 
+            toplamL.AutoSize = true;
+            toplamL.BackColor = Color.Plum;
+            toplamL.Location = new Point(1012, 361);
+            toplamL.Name = "toplamL";
+            toplamL.Size = new Size(17, 20);
+            toplamL.TabIndex = 59;
+            toplamL.Text = "0";
             // 
             // Form1
             // 
@@ -606,6 +605,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(1130, 658);
+            Controls.Add(toplamL);
+            Controls.Add(satinAlButton);
             Controls.Add(kayitButton);
             Controls.Add(cikarmaButton);
             Controls.Add(label10);
@@ -618,13 +619,10 @@
             Controls.Add(bakiyeTbox);
             Controls.Add(label6);
             Controls.Add(sifreTbox);
-            Controls.Add(emailTbox);
             Controls.Add(adSoyadTbox);
             Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(hesaplaButton);
-            Controls.Add(toplamTbox);
             Controls.Add(label2);
             Controls.Add(urunlerLbox);
             Controls.Add(wetCbox);
@@ -689,13 +687,10 @@
         private CheckBox wetCbox;
         private ListBox urunlerLbox;
         private Label label2;
-        private TextBox toplamTbox;
         private Button hesaplaButton;
         private Label label3;
-        private Label label4;
         private Label label5;
         private TextBox adSoyadTbox;
-        private TextBox emailTbox;
         private TextBox sifreTbox;
         private Label label6;
         private TextBox bakiyeTbox;
@@ -708,5 +703,7 @@
         private Label label10;
         private Button cikarmaButton;
         private Button kayitButton;
+        private Button satinAlButton;
+        private Label toplamL;
     }
 }
